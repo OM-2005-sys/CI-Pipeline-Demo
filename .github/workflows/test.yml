@@ -1,0 +1,21 @@
+Sname: CI pipeline 
+
+on: 
+push:
+branches:
+main
+
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- name: checkout repository 
+  uses: actions/checkout@v2
+- name: display message
+  run: echo "continuous integration started"
+- name: display current directory
+  run: pwd
+- name: list repository files
+  run: ls
+- name:   
+  run: echo "pipeline started executed successfully" 
